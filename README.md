@@ -1,6 +1,6 @@
 # 🌱 My Web Development Journey  
 
-Hi there! 👋 I'm Safietou, a passionate learner diving deep into the world of web development. Here’s another course I’m following to sharpen my skills and build real-world projects:  
+Hi there! 👋 I'm Safietou, a passionate learner diving deep into the world of web development. Here’s another course I’m following (after the HTML / CSS one) to sharpen my skills and build real-world projects:  
 
 **🎥 Course:** [JavaScript Tutorial by SuperSimpleDev] (https://www.youtube.com/watch?v=EerdGm-ehJQ)  
 **🔥 Why This Course?**  
