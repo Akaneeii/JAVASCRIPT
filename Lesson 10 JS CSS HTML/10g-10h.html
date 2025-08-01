@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10g-10h</title>
+        <link rel="stylesheet" href="styles/10g-10h.css">
+        
+    </head>
+
+    <body>
+        
+        
+
+        <button class="js-button1" onclick="
+             isToggled(this);
+            ">Gaming</button>
+        <button class="js-button2" onclick="
+             isToggled(this);
+            ">Music</button>
+        <button class="js-button3" onclick="
+             isToggled(this);
+            ">Tech </button>
+            <br><br>
+
+        <input class="js-cost-of-order order-cost" type="text" placeholder="Cost of order"
+         onkeydown="
+         handleCostKeydown();
+         ">
+         
+         <button class="Calculate-button" onclick="
+          finalCost();
+         ">Calculate</button>
+         <p class="js-final-cost "></p>
+
+
+
+
+        <script src="scripts/10g-10h.js"></script>
+    </body>
+</html>

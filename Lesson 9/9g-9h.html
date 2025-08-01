@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+    </head>
+
+
+    <body>
+    
+         <p>Amazon Shipping Calculator</p>
+         <input class="js-cost-of-order" type="text" placeholder="Cost of order"
+         onkeydown="
+         handleCostKeydown();
+         ">
+         <button onclick="
+          finalCost();
+         ">Calculate</button>
+         <p class="js-final-cost"></p>
+        <br>
+
+        <input onkeyup="
+            const inputElem = document.querySelector('.js-input');
+            document.querySelector('.js-update-typing').innerHTML=inputElem.value;
+        " type="text" placeholder="type some text" class="js-input">
+        <p class="js-update-typing"></p>
+
+        <script>
+            
+            //window is the main object 
+
+            window.document
+            window.console.log
+            window.alert
+
+
+           
+
+           function finalCost(){
+
+            //to get the text inside the imput elments we use value not inner.HTML
+            let orderCostElement=Number(document.querySelector('.js-cost-of-order').value);
+        let cost= document.querySelector('.js-final-cost');
+            
+            if (orderCostElement < 40  ) {
+                orderCostElement+=10;
+               cost.innerText = `$ ${Math.round(orderCostElement)}`;
+            }
+
+            else if (orderCostElement > 40) {
+                 cost.innerText = `$${orderCostElement}`;
+            }
+           }
+
+            function handleCostKeydown(){
+                    if (event.key === 'Enter') 
+            finalCost();
+            }
+
+
+        </script>
+    </body>
+</html>

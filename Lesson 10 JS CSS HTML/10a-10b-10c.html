@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10a-10b</title>
+
+        <style>
+            .add{
+                background-color: rgb(255,216,20);
+                border: none;
+                padding: 8px 50px;
+                border-radius: 30px;
+                font-family: Arial;
+                font-size: 15px;
+            }
+
+            .request{
+                background-color: black;
+                color: white;
+                font-family: Arial;
+                font-weight: bold;
+                padding: 10px 17px;
+                border: none;
+                border-radius: 5px;
+                margin-right: 15px;
+            }
+
+            .schedule{
+                background-color: rgb(230,230,230);
+                color: black;
+                font-family: Arial;
+                font-weight: bold;
+                padding: 11px 15px;
+                border: none;
+                border-radius: 5px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        
+        <button class="add"> Add to Cart</button>
+        <br><br>
+        <button class="request">Request now</button>
+        <button class="schedule">Schedule for later</button>
+        <br><br>
+        <button class="js-button">Test</button>
+
+
+
+
+
+        <script>
+            console.log(document.querySelector('.js-button').classList.contains('js-button'));
+            //it returns true
+        </script>
+    </body>
+</html>

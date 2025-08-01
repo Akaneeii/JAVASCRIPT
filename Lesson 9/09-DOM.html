@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+
+
+    <body>
+        
+        <button>hello</button>
+        <button class=" js-button">Second button</button>
+
+
+
+
+        <script>
+           //querrySelector method (function inside the document object)
+
+           console.log(document.querySelector('button') //gets the firt button on the page
+                                .innerHTML='bonjour');
+
+
+          document.querySelector('.js-button').innerHTML='welcome';
+
+
+
+
+
+           /*console.log(document.title) ;
+           document.title='changed';
+           console.log(document.title) ;
+
+           console.log(document.body);
+           console.log(typeof document.body);
+
+           console.log(document.body.innerHTML);
+
+           document.body.innerHTML= '<button>Good job</button>';*/
+
+
+            // document.body.innerHTML = 'hello';
+            // document.title= 'Good job';
+
+
+        </script>
+    </body>
+</html>

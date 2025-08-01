@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+    font-family: Arial ;
+
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.gray{
+    background-color: rgb(58, 57, 57);
+}
+
+.clear-sign{
+    font-size: 15px;
+}
+
+.yellow{
+    background-color: orange;
+}
+
+.calculation{
+    color: white;
+    font-size: 40px;
+    margin-bottom:0 ;
+    border: 1px solid white;
+    width: 220px;
+
+}

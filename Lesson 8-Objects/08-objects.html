@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+
+    <body>
+        
+
+
+        <script>
+
+            // // this is an object
+            // const product={
+            //     name: 'socks',
+            //     price: 1090
+
+            //     // name and price are the propreties
+
+            // };
+
+            // console.log(product);
+            // console.log(product.name);
+            // console.log(product.price);
+ 
+            // // we can also use a proprety to change or create a value in the object using the dot notation
+
+            // product.name = 'cotton socks';
+            // console.log(product.name);
+
+            // product.newProprety =true;
+
+            // console.log(product);
+
+            // //we can also delete a value
+
+            // delete product.newProprety;
+
+            //  console.log(product);
+
+            //  //objects make our code more organize. C'est comme une structure en C
+
+
+            const product2={
+                name: 'shirt',
+                ['delivery-time']:'1 day',
+                rating:{ //nested object
+                    stars:4.5,
+                    count:87,
+                },
+
+                fun: function function1(){ //storing a fonction inside an object is called a method
+                    console.log('function inside object')
+                }
+            };
+
+            console.log(product2);
+            console.log(product2.name);
+            
+
+            // we have another notation tho
+
+            console.log(product2['delivery-time']);
+
+            console.log(product2.rating.stars)
+            product2.fun();
+
+            //now we're gonna use built-in objects (JSON and LocalStorage)
+
+
+            //JSON is kinda simmilar to a js object in syntax except i doesn't support single quotes not functions
+
+           console.log(typeof JSON.stringify(product2)) ; //converting the object into JSON(string)
+
+          const jsonstring= JSON.parse(JSON.stringify(product2));
+
+          console.log(jsonstring)
+
+          //variable are temporary so we cannot store thing in them for long enough (dissapears when the page is refreshed)
+
+          //That's the whole point of using localStorage
+
+          
+
+
+             
+
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+
+const object1={
+    message:'hello',
+    price:799,
+
+};
+
+
+const object2= object1;
+
+
+// const message = object1.message;
+
+const { message,price } = object1;
+console.log(message);
+console.log(price);
+
+const object3={
+    message:message,
+    
+}
+
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+
+        <style>
+            .subscribe-button{
+                background-color: black;
+                color: white;
+                border: none;
+                border-radius: 30px;
+                padding: 10px;
+                font-weight: 700;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-family: Arial;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+
+            .is-subscribed{
+                background-color: rgb(240, 240, 240);
+                color: black;
+                
+
+            }
+
+            .order-cost{
+
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            .Calculate-button{
+                background-color: green;
+                color: white;
+                border: none;
+                padding: 12px;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+        </style>
+
+    </head>
+
+
+    <body>
+        <p >Youtube Subscribe Button</p>
+        <button class="js-subscribe-button subscribe-button" onclick="
+          subscribe();
+        " >        Subscribe</button>
+         <!-- innerText to avoid spaces -->
+
+
+         <p>Amazon Shipping Calculator</p>
+         <p>Orders under $40 = +$10 shipping.</p>
+         <p>Orders over $40 = FREE shipping.</p>
+         
+         
+         <input class="js-cost-of-order order-cost" type="text" placeholder="Cost of order"
+         onkeydown="
+         handleCostKeydown();
+         ">
+         
+         <button class="Calculate-button" onclick="
+          finalCost();
+         ">Calculate</button>
+         <p class="js-final-cost "></p>
+
+
+        <script>
+            
+            //window is the main object 
+
+            window.document
+            window.console.log
+            window.alert
+
+
+            function subscribe(){
+
+                const buttonElement= document.querySelector('.js-subscribe-button');
+
+                if (buttonElement.innerText === 'Subscribe') {
+                    
+                    buttonElement.innerText = 'Subscribed';
+                    buttonElement.classList.add('is-subscribed');
+                    
+                }
+
+                else{
+                    buttonElement.innerText = 'Subscribe';
+                buttonElement.classList.remove('is-subscribed');
+                }
+                    
+            }
+
+           function finalCost(){
+
+            //to get the text inside the imput elments we use value not inner.HTML
+            let orderCostElement=Number(document.querySelector('.js-cost-of-order').value);
+        let cost= document.querySelector('.js-final-cost');
+            
+            if (orderCostElement < 40  ) {
+                orderCostElement+=10;
+               cost.innerText = `$ ${orderCostElement}`;
+            }
+
+            else if (orderCostElement > 40) {
+                 cost.innerText = `$${orderCostElement}`;
+            }
+           }
+
+            function handleCostKeydown(){
+                    if (event.key === 'Enter') 
+            finalCost();
+            }
+
+
+        </script>
+    </body>
+</html>

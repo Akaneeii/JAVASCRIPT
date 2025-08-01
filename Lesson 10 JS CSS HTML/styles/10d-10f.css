@@ -1,0 +1,15 @@
+button{
+
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.is-toggled{
+
+    background-color: black;
+    color: white;
+
+}
