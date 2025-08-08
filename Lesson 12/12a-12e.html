@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12a-12c</title>
+        
+    </head>
+
+    <body>
+        
+        <button class="js-button" onclick="
+              const change= document.querySelector('.js-button');
+              change.innerText = 'Loading...';
+              setTimeout(finished,1000);
+            ">Start</button>
+    <br><br>
+            <button class="js-add-button" onclick="
+            
+             const added = document.querySelector('.js-added');
+            added.innerHTML = 'Added';
+            
+           
+            if (window.addedTimeout) {
+                clearTimeout(window.addedTimeout);
+            }
+            
+            window.addedTimeout = setTimeout(removeAdded, 2000);
+
+            ">Add to cart</button>
+            <p class="js-added"></p>
+
+
+        <script>
+             let add = function(){
+                console.log(2+3);
+             }
+            //  add();
+            //  add();
+
+             function runTwice(fun){
+                fun();
+                fun();
+             }
+      runTwice(add);
+             runTwice(function(){
+                console.log('12b');
+             })
+
+             /*function finished(){
+
+                const change= document.querySelector('.js-button');
+
+                if (change.innerText === 'Start') {
+                    
+                    change.innerText = 'Finished!';
+                }
+
+                else
+                    change.innerText = 'Start';
+            }*/
+
+            //12d
+
+           /* function finished(){
+                const change= document.querySelector('.js-button');
+                if (change.innerText === 'Loading...') {
+                    
+                    change.innerText = 'Finished!';
+                }
+                else
+                    change.innerText = 'Start';
+
+            }*/
+
+            function removeAdded(){
+                const added = document.querySelector('.js-added');
+
+                added.innerHTML = '';
+
+            }
+
+        </script>
+    </body>
+</html>

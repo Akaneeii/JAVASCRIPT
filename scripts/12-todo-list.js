@@ -1,5 +1,5 @@
 const todoArray = [{
-    name:'lulqby',
+    name:'lullaby',
     date:'05-08-2025'
 }];
 //make sure to declare it outside to not reset the array everytime your inout changes
@@ -7,9 +7,8 @@ const todoArray = [{
 renderTodoList();
 function renderTodoList(){
     let todoListHTML = '';
-    for (let i = 0; i < todoArray.length; i++) {
-    const todoObject = todoArray[i];
 
+    todoArray.forEach(function(todoObject,index){
     // const name = todoObject.name;
     // const date = todoObject.date;
 
@@ -22,14 +21,15 @@ function renderTodoList(){
     <div>${name}</div>
     <div class="">${date}</div>
     <button class="delete" onclick =" 
-    todoArray.splice(${i},1);
+    todoArray.splice(${index},1);
     renderTodoList();
     ">Delete</button>
 
     `;
     todoListHTML+=html;
-
-    }
+        
+    });
+    
 
     document.querySelector('.js-container')
     .innerHTML = todoListHTML;

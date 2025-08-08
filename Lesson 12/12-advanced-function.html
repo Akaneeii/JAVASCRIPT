@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced Function</title>
+</head>
+
+<body>
+    
+
+
+
+
+    <script>
+
+      /*  //this first syntax gives us the hoisting advantage.
+        //meaning that we can call the function before it's created
+        greeting();
+        function greeting(){
+            console.log('Hello there');
+        }
+        
+
+        const num = 2;
+        
+        // we can save a function inside a variable
+        //bc tehey are values
+
+        //the name "greeting" isn't needed anymore.This is called an anonymous function
+
+        //Hoisting doesn't work in here
+        const function1 =   function (){
+            console.log('Hello there 2');
+        }
+
+        function1();
+
+
+        //since it's a value, we can store it in an object
+
+        const object = {
+            num:2,
+            fun: function(){
+                 console.log('Hello there 3');
+                
+            }
+        }
+
+        object.fun();
+
+        //We can oass a value inside a function(parameters)
+        //i know how to do it
+
+        //We can also pass a function intp another function
+        //it's called a callbackù
+        function run(param){
+            param();
+        }
+
+        run(function(){
+                 console.log('Hello there 4');}) */
+
+
+                 [
+                    'make dinner',
+                    'wash dishes',
+                    'watch youtube',
+                 ].forEach(function(value,index){
+                    if (value === 'wash dishes') {
+                        return;
+                    }
+                    
+                    console.log(index);
+                    console.log(value);
+                 })
+
+
+                 //we can loop through an array using a method of arrays : the forEach loop
+                 // it's the prefered way to loop through an array
+
+        
+
+
+    </script>
+</body>
+</html>

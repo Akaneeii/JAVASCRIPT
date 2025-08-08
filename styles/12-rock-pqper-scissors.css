@@ -1,0 +1,38 @@
+body{
+            background-color: rgb(25,25,25);
+            color: white;
+            font-family: Arial;
+        }
+
+        .title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .move-button{
+            border-radius: 60px;
+            background-color: transparent;
+            width: 120px;
+            height: 120px;
+            border: 3px solid white;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .move-icon{
+            object-fit: cover;
+            height: 50px;
+            border-radius: 100px;
+        }
+
+        .result{
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 50px;
+        }
+
+        .reset,.auto-play-button{
+            padding: 7px 15px;
+            cursor: pointer;
+        }
+
+        

@@ -40,5 +40,26 @@ const array = [3];
 console.log(minMax(array));
 
 //11n
+function countWords(words)
+{
+    let object = {};
 
+    for (let i = 0; i < words.length; i++) {
+        
+        const word=words[i];
+
+        if (object[word]) {
+            object[word]+=1;
+        }
+        else
+            object[word]=1;
+        
+    }
+
+    return object
+}
+
+const arrayOfWords = ['apple', 'grappe', 'apple', 'apple'];
+
+console.log(countWords(['apple', 'grappe', 'apple', 'apple']));
 
