@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>App</title>
+    </head>
+    <body>
+        <button class="js-add" onclick="
+            add()"
+            >Add</button>
+        <button class="js-remove" onclick="
+        remove()
+        ">Remove</button>
+
+        <script>
+            let messages = 2;
+            let titleInterval;
+            let isDisplaying = false;
+
+            function startBlinking() {
+                if (isDisplaying) return;
+                
+                isDisplaying = true;
+                titleInterval = setInterval(() => {
+                    document.title = document.title === 'App' 
+                        ? `(${messages}) New messages` 
+                        : 'App';
+                }, 1000);
+            }
+
+            function add() {
+                messages++;
+                if (!isDisplaying && messages > 0) {
+                    startBlinking();
+                }
+            }
+
+            function remove() {
+                if (messages > 0) {
+                    messages--;
+                }
+                
+                if (messages === 0) {
+                    clearInterval(titleInterval);
+                    document.title = 'App';
+                    isDisplaying = false;
+                }
+            }
+
+         
+            if (messages > 0) {
+                startBlinking();
+            }
+        </script>
+    </body>
+</html>
